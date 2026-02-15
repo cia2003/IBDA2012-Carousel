@@ -9,15 +9,11 @@ Live site: https://cia2003.github.io/IBDA2012-Carousel/
 
 # 🛠 Features
 
-Previous and next navigation buttons
-
-Auto-slide functionality
-
-Smooth transition effects
-
-Dynamic background color changes per slide
-
-Responsive design
+- Previous and next navigation buttons
+- Auto-slide functionality
+- Smooth transition effects
+- Dynamic background color changes per slide
+- Responsive design
 
 # ⚠️ Note
 
