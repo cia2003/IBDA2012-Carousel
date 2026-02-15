@@ -63,11 +63,19 @@ body {
 }
 .button-left {
     left: 0%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease;
 }
 .button-right {
     right: 0%;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -50%) scale(1);
+    transition: transform 0.3s ease;
+}
+.button-left:hover{
+    transform: translate(-50%, -50%) scale(1.2);
+}
+.button-right:hover{
+    transform: translate(50%, -50%) scale(1.2);
 }
 .button-icon {
     stroke: #087f5b;
