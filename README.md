@@ -5,7 +5,7 @@ It allows users to navigate between different testimonials with smooth transitio
 
 # 🚀 Live Site
 
-Live site: TBA
+Live site: https://cia2003.github.io/IBDA2012-Carousel/
 
 # 🛠 Features
 
