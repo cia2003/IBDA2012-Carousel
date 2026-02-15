@@ -71,3 +71,9 @@ function nextSlide() {
     updateCarousel(counter);
     console.log("Next slide:", counter);
 }
+
+// Auto Slides
+// Event Listeners
+const carousel = document.querySelector(".carousel");
+carousel.addEventListener("mouseenter", () => clearInterval(autoSlide));
+carousel.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, 5000));
