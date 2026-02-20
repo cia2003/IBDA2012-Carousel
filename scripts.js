@@ -45,7 +45,7 @@ let counter = 0;
 const totalData = Object.keys(userData).length;
 
 // Functions
-function updateCarousel(counter) {
+function updateSlide(counter) {
   const currentData = userData[counter];
   const currentColor = cardColors[counter];
 
@@ -67,14 +67,14 @@ function updateCarousel(counter) {
 function previousSlide() {
   counter = (counter - 1 + totalData) % totalData;
 
-  updateCarousel(counter);
+  updateSlide(counter);
   console.log("Previous slide:", counter);
 }
 
 function nextSlide() {
   counter = (counter + 1 + totalData) % totalData;
 
-  updateCarousel(counter);
+  updateSlide(counter);
   console.log("Next slide:", counter);
 }
 
