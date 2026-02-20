@@ -45,6 +45,22 @@ let counter = 0;
 const totalData = Object.keys(userData).length;
 
 // Functions
+function createDecorationList() {
+  const decorationList = document.createElement("ul");
+  decorationList.classList.add("decoration-list");
+
+  for (let i = 0; i < totalData; i++) {
+    const decorationItem = document.createElement("li");
+    decorationItem.classList.add("decoration-item");
+    if (i === 0) {
+      decorationItem.classList.add("active");
+    }
+    decorationList.appendChild(decorationItem);
+  }
+
+  const decorationContainer = document.querySelector(".decoration");
+  decorationContainer.appendChild(decorationList);
+}
 function updateSlide(counter) {
   const currentData = userData[counter];
   const currentColor = cardColors[counter];
@@ -54,6 +70,7 @@ function updateSlide(counter) {
   const testimonialText = document.querySelector(".testimonial-text");
   const testimonialAuthor = document.querySelector(".testimonial-author");
   const testimonialJob = document.querySelector(".testimonial-job");
+  const decorationItems = document.querySelectorAll(".decoration-item");
 
   carousel.style.backgroundColor = currentColor.backgroundColor;
   carouselImage.src = currentData.backgroundImage;
@@ -62,15 +79,17 @@ function updateSlide(counter) {
   testimonialAuthor.style.color = currentColor.fontColor;
   testimonialJob.textContent = currentData.testimonialJob;
   testimonialJob.style.color = currentColor.fontColor;
+  decorationItems.forEach((item, index) => {
+    item.style.backgroundColor =
+      index === counter ? currentColor.backgroundColor : "transparent";
+  });
 }
-
 function previousSlide() {
   counter = (counter - 1 + totalData) % totalData;
 
   updateSlide(counter);
   console.log("Previous slide:", counter);
 }
-
 function nextSlide() {
   counter = (counter + 1 + totalData) % totalData;
 
@@ -86,3 +105,6 @@ carousel.addEventListener(
   "mouseleave",
   () => (autoSlide = setInterval(nextSlide, 5000)),
 );
+
+// Initialization
+createDecorationList();

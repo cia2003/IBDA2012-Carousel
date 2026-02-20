@@ -11,12 +11,20 @@ body {
   color: #343a40;
   line-height: 1;
 }
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
 .carousel {
   display: flex;
   align-items: center;
-  gap: 86px;
+  gap: 64px;
   width: 800px;
-  margin: 100px auto;
+  margin: 50px auto;
   background-color: #087f5b;
   padding: 32px;
   padding-left: 86px;
@@ -65,12 +73,12 @@ body {
 .button-left {
   left: 0%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 .button-right {
   right: 0%;
   transform: translate(50%, -50%) scale(1);
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 .button-left:hover {
   transform: translate(-50%, -50%) scale(1.2);
@@ -82,6 +90,21 @@ body {
   stroke: #087f5b;
   width: 24px;
   height: 24px;
+}
+.decoration-list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+.decoration-item {
+  width: 16px;
+  height: 16px;
+  border: 3px solid black;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.decoration-item.active {
+  background-color: #087f5b;
 }
 
 @media screen and (max-width: 800px) {
